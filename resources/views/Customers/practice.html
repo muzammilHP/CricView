@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <!-- Include your CSS and JavaScript files -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div id="checkoutForm">
+        <!-- Display seat details, total seats, subtotal, and ask for user info -->
+        <div id="orderSummary">
+            <h2>Order Summary</h2>
+            <div id="seatDetails">
+                <label for="">Seat Details:</label>
+                <p></p>
+            </div>
+            <div id="totalSeats">
+                <label for="">Total Seats:</label>
+                <p></p>
+            </div>
+            <div id="subtotal">
+                <label for="">Sub Total</label>
+                <p></p>
+            </div>
+        </div>
+        <div id="userInfoForm">
+            <h2>Enter Your Information</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="cnic">CNIC:</label>
+            <input type="text" id="cnic" required>
+        </div>
+        <!-- Payment options (Easypaisa, Jazz Cash) -->
+        <div id="paymentOptions">
+            <h2>Choose Payment Method</h2>
+            <label>
+                <input type="radio" name="paymentMethod" value="easypaisa"> Easypaisa
+            </label>
+            <label>
+                <input type="radio" name="paymentMethod" value="jazzCash"> Jazz Cash
+            </label>
+        </div>
+        <!-- Button to trigger payment -->
+        <button id="payNow" onclick="processPayment()">Pay Now</button>
+    </div>
+    <!-- Modal for displaying ticket after successful payment -->
+    <div id="ticketModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Your Ticket</h2>
+            <div id="ticketDetails"></div>
+            <button onclick="printTicket()">Print Ticket</button>
+        </div>
+    </div>
+    <script>
+        // Assume you have seat details, total seats, subtotal available globally
+var seatDetails = "Section 150, Row 19, Seat 1";
+var totalSeats = 2; // Example value, replace with actual calculation
+var subtotal = 200; // Example value, replace with actual calculation
+
+document.getElementById("seatDetails").innerHTML = "Seat Details: " + seatDetails;
+document.getElementById("totalSeats").innerHTML = "Total Seats: " + totalSeats;
+document.getElementById("subtotal").innerHTML = "Subtotal: $" + subtotal;
+
+function processPayment() {
+    // Retrieve user info
+    var userName = document.getElementById("name").value;
+    var userCNIC = document.getElementById("cnic").value;
+
+    // Retrieve selected payment method
+    var paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+
+    if (!userName || !userCNIC || !paymentMethod) {
+        alert("Please fill in all fields and choose a payment method.");
+        return;
+    }
+
+    // Simulate payment processing (replace with actual payment processing logic)
+    alert("Payment successful!");
+
+    // Display ticket details in the modal
+    var ticketDetails = "Name: " + userName + "<br>CNIC: " + userCNIC + "<br>" + seatDetails + "<br>Total Seats: " + totalSeats + "<br>Subtotal: $" + subtotal;
+    document.getElementById("ticketDetails").innerHTML = ticketDetails;
+
+    // Show the modal
+    var modal = document.getElementById("ticketModal");
+    modal.style.display = "block";
+}
+
+function printTicket() {
+    // Implement ticket printing logic (e.g., open a new window with ticket details)
+    alert("Printing ticket...");
+}
+
+function closeModal() {
+    var modal = document.getElementById("ticketModal");
+    modal.style.display = "none";
+}
+    </script>
+</body>
+</html>
+

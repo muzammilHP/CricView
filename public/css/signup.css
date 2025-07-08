@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    padding: 45px 100px 45px 100px;
+}
+body{
+    /* background-color: blue; */
+    /* background: url(background.avif); */
+    background-size: cover;
+}
+nav{
+    height:60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+nav .logo{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #6d95db;
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.logo h1{
+    position: relative;
+    right: 19px;
+    top: 7px;
+}
+
+/*------------------content-section---------------------*/
+#content-section{
+    height: 450px;
+    width: 100%;
+    display: flex;
+    padding-top: 90px;
+    color: white;
+}
+#content-section .left{
+    width:50%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.left h1{
+    font-size: 45px;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    color:white;
+    border-bottom: 2px solid white;
+}
+.left p{
+    font-size: 20px;
+    color:white;
+}
+.left h2{
+    font-size: 27px;
+    padding:15px 0px 25px 0px;
+    animation: slide-in 4s ease-in-out infinite;
+}
+@keyframes slide-in {
+    0%, 100% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(20%);
+      }
+}
+h3 {
+    position: relative;
+  }
+
+  
+/* .left h3{
+    font-size: 25px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0));
+    background-size: 200% 100%;
+    z-index: 1;
+    animation: shine 6s linear infinite;
+}
+@keyframes shine {
+    0%, 100% {
+      background-position: -200% 0;
+    }
+    50% {
+      background-position: 200% 0;
+    }
+  } */
+.left button{
+    height: 40px;
+    width: 130px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 40px 0px 0px 0px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: rgb(226, 137, 137);
+    border: 2px solid rgb(226, 137, 137);
+    background-color: #1d2023;
+}
+.left button:hover{
+    background-color:#363430;
+    color: black;
+}
+#content-section .right{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.right .signup{
+    height: 125%;
+    width: 65%;
+    border: 2px solid rgb(178, 216, 232);
+    position:relative;
+    top: -60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    color: white;
+}
+form{
+    padding-top: 15px;
+}
+label{
+    font-size: 18px;
+}
+input{
+    font-size: 16px;
+    height: 35px;
+    width: 250px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.signup button{
+    height:30px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    margin-left: 68px;
+    cursor: pointer;
+}
+.signup button:hover{
+    color: black;
+    background-color: aqua;
+    font-size: 14px;
+}

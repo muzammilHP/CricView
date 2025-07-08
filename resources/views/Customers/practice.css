@@ -1,0 +1,16 @@
+.right {
+    text-align: center;
+}
+
+.right img {
+    width: 100px; /* Adjust the width to your preference */
+}
+
+.social-media {
+    margin-top: 10px; /* Add some space between h1 and social media icons */
+}
+
+.social-media img.icon {
+    width: 60px; /* Adjust the width of social media icons to be smaller */
+    margin: 0 5px; /* Add spacing between social media icons */
+}

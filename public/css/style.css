@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    padding: 45px 100px 45px 100px;
+}
+nav{
+    height:80px;
+    width: 100%;
+    display: flex;
+}
+body{
+    background: radial-gradient(circle, #0a151f 85%, #f76696 15%);
+}
+nav .left{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(226, 137, 137);;
+}
+nav .logo{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #6d95db
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.logo h1{
+    position: relative;
+    right: 19px;
+    top: 7px;
+}
+nav .right{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: black;
+}
+nav .one{
+    width: 70%;
+}
+nav .two{
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+}
+button{
+    height: 40px;
+    width: 130px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 7px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: rgb(226, 137, 137);
+    border: 2px solid rgb(226, 137, 137);
+    background-color: #1d2023;
+}
+button:hover{
+    background-color: #363430;
+    color:black;
+}
+
+/*----------------------content-section----------------------*/
+#content-section{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    padding-top: 40px;
+}
+#content-section .left{
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    padding: 55px;
+}
+#content-section .left h1{
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 10px;
+    border-bottom: 2px solid #f76696;;
+    color: aqua;
+}
+#content-section .left p{
+    padding-top: 20px;
+    color: #f76696;
+}
+.buttons{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+/* .buttons button{
+    width: 40%;
+} */
+#content-section .right{
+    height: 100%;
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#content-section .right img{
+    height: 90%;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 10px 8px 10px rgba(201, 190, 190, 0.3);
+}
